@@ -1,6 +1,6 @@
 package com.entity;
 
-public class Employee {
+public abstract class Employee {
 
 	private String employeeName;
 	private int empId;
