@@ -9,5 +9,11 @@ public class StringTask {
 		// validate phone number through regular expression 
 		
 		
+		String email = "ramesh@gamil.com";
+		// validate email should be ended by .com
+
+		
+		String email2 = "ramesh.kumar@gmail.com";
+		// extract name of the user : RAMESH KUMAR 
 	}
 }
