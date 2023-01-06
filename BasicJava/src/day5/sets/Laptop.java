@@ -1,6 +1,6 @@
 package day5.sets;
 
-public class Laptop {
+public class Laptop implements Comparable<Laptop>{
 
 	
 	private int id;
@@ -84,5 +84,16 @@ public class Laptop {
 		return "Laptop [id=" + id + ", branName=" + branName + ", cost=" + cost + ", ramSize=" + ramSize + "]";
 	}
 	
+	@Override
+	public int compareTo(Laptop obj) {
+		
+		return this.getId() - obj.getId();
+	}
 	
-}
+	
+	
+	
+	
+	
+	
+}//end class
