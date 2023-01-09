@@ -9,18 +9,15 @@ public class MainClassJava8 {
 		//String bluetoothNotification = onePlus.shareFile("Music.mp3", "MI-8 Pro", new BluetoothV4()  );
 		// String bluetoothNotification = onePlus.shareFile("Music.mp3", "MI-8 Pro", null ); // wrong solution
 		
-		
 	
 		
+		Bluetooth b = (fileToShare,destinationPhone)->{
+			// code to share file and get status
+				return "File t/f via lambda express "+fileToShare+" to phone "+destinationPhone;
+		};
 		
-		String bluetoothNotification = onePlus.shareFile("Music.mp3", "MI-8 Pro", ()->{
-			@Override
-			public String shareFile(String fileName, String destinationDevice) {
-				// lots of file share code
-				
-				return "File "+fileName+" transfered to "+destinationDevice;
-			}
-		} );
+		
+		String bluetoothNotification = onePlus.shareFile("Music.mp3", "MI-8 Pro", b);
 		
 		
 		
