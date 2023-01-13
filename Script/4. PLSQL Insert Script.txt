@@ -1,0 +1,3 @@
+BEGIN
+ insert into MKJSTUDENT values(11001,'Mhd. Ali',24,650);
+END;

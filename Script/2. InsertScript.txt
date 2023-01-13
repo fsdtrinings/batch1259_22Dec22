@@ -1,0 +1,28 @@
+insert into instructor values(731,'Ashish',2000,2007);
+insert into instructor values(781,'Kirti',2000,2005);
+insert into instructor values(784,'Jatin',2000,2006);
+insert into instructor values(165,'Aida',2000,2017);
+
+--------------------------------------------------------------------
+
+insert into courses values('Java','Technical',320,4);
+insert into courses values('Spring Framework','Technical',40,1);
+insert into courses values('ORM Framework','Technical',40,1);
+insert into courses values('SalesForce','Technical',40,1);
+insert into courses values('Machine Learning','Data Science',160,2);
+insert into courses values('EXCEL','Management',24,1);
+insert into courses values('Power BI','Management',24,1);
+
+insert into courses(CourseName,Category,Duration) values('Learn Arabic','Language',400);
+insert into courses(CourseName,Category,Duration) values('learn English','Language',320);
+
+-------------------------------------------------------------------------
+insert into InstructorInfo values (1,731,'Delhi-123','ashish@mkjit-solutions.com',9654144814,'Hindi','English');
+insert into InstructorInfo values (2,781,'Delhi-123','kirti@mkjit-solutions.com',9654144814,'Punjabi','English');
+insert into InstructorInfo values (3,784,'Delhi-008','jitin@mkjit-solutions.com',9654144814,'Hindi','English');
+insert into InstructorInfo values (4,165,'Cairo-148','aida@mkjit-solutions.com',9654144814,'Arabic','English');
+
+------------------------------------------------------------------------------------
+
+insert into InstructorCourseInfo values (16,'EXCEL',731);
+insert into InstructorCourseInfo values (22,'learn English',781);

@@ -1,0 +1,48 @@
+create table Courses(
+   CourseName varchar(30) Primary Key,
+   Category varchar(30) not null,
+   Duration int default 30,
+   TestInclude int default 4
+   
+);
+
+create table Instructor(
+ instructorCode int Primary Key,
+ name varchar(20) not null,
+ salary int not null,
+ jobStartYear int not null
+);
+
+
+Create Table InstructorInfo(
+
+recordId int primary key,
+instructorCode int references Instructor(instructorCode),
+address varchar(100),
+email varchar(30),
+phone number(10),
+firstLanguage varchar(20),
+secondLanguage Varchar(20)
+);
+
+create table InstructorCourseInfo(
+  icInfoID int primary key,
+  CourseName varchar(30) references Courses(courseName),
+  instructorCode int references Instructor(instructorCode)
+);
+
+create table mkjstudent(
+  enrollmentNumber int primary key,
+  studentName varchar(20) not null,
+  age int check (age > 17),
+  feePaid int
+ 
+  
+);
+
+create table Batch(
+ batchId int primary key,
+ courseInfo varchar(30) references Courses(courseName),
+ instructorInfo int references Instructor(instructorCode),
+ studentInfo int references mkjstudent(enrollmentNumber)
+);

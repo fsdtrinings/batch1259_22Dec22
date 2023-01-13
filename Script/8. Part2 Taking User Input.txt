@@ -1,0 +1,31 @@
+DECLARE
+ exp integer;
+ currentYear integer;
+ startYear integer;
+ trainerName varchar(20);
+ code integer;
+BEGIN
+   DBMS_OUTPUT.PUT_LINE('Enter Code ');
+   code := :code;
+
+   SELECT NAME,JOBSTARTYEAR
+   INTO trainerName,startYear
+   FROM instructor
+   WHERE INSTRUCTORCODE = code;
+
+   SELECT extract(year from sysdate) 
+   INTO currentYear
+   FROM dual;
+
+   exp := currentYear - startYear;
+   
+   DBMS_OUTPUT.PUT_LINE('--------------------------------------------');
+   DBMS_OUTPUT.PUT_LINE(' Trainer'||' '||trainerName||' having total experience '||exp);
+   DBMS_OUTPUT.PUT_LINE('--------------------------------------------');
+  
+   IF exp > 10
+   THEN 
+     DBMS_OUTPUT.PUT_LINE('Experience is Good');
+   ELSE
+     DBMS_OUTPUT.PUT_LINE('Experience is FAIR');
+   END IF

@@ -1,0 +1,11 @@
+string strInsert = 
+"Insert into call_log
+           (pno, name, complain_date, complain_time, problem, pcno, complain_no) 
+     values('123','name','" + DateTime.Now.ToString("yyyy/MM/dd") + "','"
+        
+            + DateTime.Now.ToString("HH:mm") + "','" +
+           txtProblems.Text + "','" + txtPCno.Text + "','" + callID + "')";
+
+
+
+                int effect = GlobalConectionClass.ExecuteNonQuery(strInsert);

@@ -1,0 +1,4 @@
+select instructorcourseinfo.coursename,instructor.name
+from instructorcourseinfo INNER JOIN instructor
+ON
+instructorcourseinfo.instructorcode = instructor.instructorcode

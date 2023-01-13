@@ -1,0 +1,13 @@
+DECLARE 
+  num_var1 number(4,2) := 88.9;
+  num_var2 number(4,2) := 88.5648;
+  num_var3 number(4,0) := 1234.12;
+  date_var DATE := TO_DATE('5/5/2015','dd/mm/yyyy');
+  str_var varchar2(5) := '55';   
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('88.9  =  '||num_var1);
+  DBMS_OUTPUT.PUT_LINE('88.5648  =  '||num_var2);
+  DBMS_OUTPUT.PUT_LINE('1234.12   =  '||num_var3);
+  DBMS_OUTPUT.PUT_LINE('05/05/2015  =  '||date_var);
+  DBMS_OUTPUT.PUT_LINE(To_NUMBER(str_var)+1);
+END;

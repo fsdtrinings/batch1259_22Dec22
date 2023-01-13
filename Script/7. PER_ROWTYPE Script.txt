@@ -1,0 +1,11 @@
+DECLARE
+ instructor_row  instructor%ROWTYPE;
+BEGIN
+ select *
+ into instructor_row
+ from instructor 
+ where instructorcode=731 ;
+
+ DBMS_OUTPUT.PUT_LINE(instructor_row.name ||' -- '||instructor_row.instructorcode||' -- '||instructor_row.jobstartyear);
+
+END;

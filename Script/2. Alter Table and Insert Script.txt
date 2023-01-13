@@ -1,0 +1,43 @@
+alter table "BATCH" add
+("LOB" VARCHAR2(20));
+
+alter table "BATCH" add
+("LOCATION" VARCHAR2(20));
+
+alter table "BATCH" add
+("OPERATIONHEAD" VARCHAR2(20));
+
+alter table "BATCH" drop
+("BATCHID");
+
+alter table "BATCH" add
+("BATCHID" INTEGER);
+
+insert into INSTRUCTORCOURSEINFO values(23,'Machine Learning',784);
+
+insert into mkjstudent values(11002,'Kartik',29,200);
+insert into mkjstudent values(11003,'Tem',29,200);
+insert into mkjstudent values(11004,'Varun',29,200);
+insert into mkjstudent values(11005,'Ritesh',29,200);
+insert into mkjstudent values(11006,'Parul',29,200);
+
+insert into mkjstudent values(11007,'Adil',29,200);
+insert into mkjstudent values(11008,'Yusf',29,200);
+
+insert into batch values('Java',731,11002,'BFSI','Nagpur','Rohini',51);
+insert into batch values('Java',731,11003,'BFSI','Nagpur','Rohini',51);
+insert into batch values('Java',731,11004,'BFSI','Nagpur','Rohini',51);
+
+insert into batch values('learn English',781,11005,'Airline','Nagpur','Rohini',52);
+insert into batch values('learn English',781,11006,'Airline','Nagpur','Rohini',52);
+
+insert into batch values('Machine Learning',784,11007,'Production','Dubai','Oman Kutti',53);
+insert into batch values('Machine Learning',784,11008,'Production','Dubai','Oman Kutti',53);
+
+
+select * from batch;
+
+select count(*),Location
+from Batch 
+Group By location
+Having location like 'Nagpur';

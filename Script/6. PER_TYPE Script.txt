@@ -1,0 +1,13 @@
+DECLARE
+ instructor_name instructor.NAME%TYPE;
+ instructor_code instructor.INSTRUCTORCODE%TYPE;
+ instructor_year instructor.JOBSTARTYEAR%TYPE;
+BEGIN
+ select name,instructorcode,jobstartyear
+ into instructor_name,instructor_code,instructor_year
+ from instructor 
+ where instructorcode=731 ;
+
+ DBMS_OUTPUT.PUT_LINE(instructor_code ||' -- '||instructor_name||' -- '||instructor_year );
+
+END;

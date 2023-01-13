@@ -1,0 +1,15 @@
+-- Script 1 for basic data handling 
+
+DECLARE
+ name varchar(20) := 'Ramesh';
+ salary int := 10000;
+ tax int;
+BEGIN 
+  DBMS_OUTPUT.put_line('Username :- '||name||' Information');
+  DBMS_OUTPUT.put_line('=====================================');  
+  tax := salary * 0.10;
+  DBMS_OUTPUT.put_line('Salary:- '||salary||' and 10% tax is '||tax);
+END;
+
+
+
