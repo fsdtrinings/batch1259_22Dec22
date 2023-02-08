@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script>
+           function doThings(abc)
+           {
+            var x = abc.value;
+            var y = document.getElementById('num1').value;
+            var sum = parseInt(x)+parseInt(y);
+            var output = document.getElementById('sumArea').innerHTML = sum+"";
+           }
+        </script>
+    </head>
+    <body>
+        Enter Number 1 <input type="text" id="num1" > <br/>
+        Enter Number 2 <input type="text" onkeyup="doThings(this)" > <br/>
+         
+        <p id="sumArea">
+
+        </p>
+       
+    </body>
+</html>

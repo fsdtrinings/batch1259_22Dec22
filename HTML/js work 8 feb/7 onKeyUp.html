@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script>
+            function doThings()
+            {
+
+                var filterOut = document.getElementById("in101").value;
+                console.log(filterOut)
+                var arr = ["America","Afganistan","Albania","Angola","India","Isreal","Ireland","Indonasia","Indiana","Italy","France","Fiji","Finland","French Guiana"];
+                var newList = [];
+                var output = document.getElementById("out101");
+                output.innerHTML = "";
+                arr.forEach(element => {
+                   
+                    if(element.startsWith(filterOut))
+                    {
+                        newList.push(element);
+                    }
+                   
+                    
+                });
+                output.innerHTML = newList.join(" | ");
+            }
+
+            
+
+        </script>
+    </head>
+    <body>
+        Enter Country Name <input type="text" id="in101" onkeyup="doThings()">
+        <b>
+        <p id="out101">
+
+        </p>
+        </b>
+       
+      
+    </body>
+</html>

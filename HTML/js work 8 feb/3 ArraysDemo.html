@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <script>
+			function doThings()
+			{
+				// ref : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+				// Object
+		 		var arr =new Array
+				arr[0]="apple"
+				arr[1]=20
+				let last = arr[arr.length - 1];
+				document.write("last element of array "+last);
+				// way 2
+				var arr1 = new Array("apple","mango",23,54)
+				// way 3
+				var arr2=["hello","world",2,5]
+
+				// iteration - approach 1 basic 
+
+				for(var x = 0;x<arr.length;x++)
+				{
+					document.write("<br/> "+arr[x]);
+				}
+				document.write("<br/> Approch 2 <br/> ");
+				// iteration - approach 2
+				arr.forEach(function(item, index, array) {
+  					console.log(item, index)
+				})
+
+				document.write("<br/><br/> <b>Concatination</b> <br/> ");
+				var arr3 = arr1.concat(arr2)
+				document.write(arr3 +"&nbsp;&nbsp;"+ arr3.length)
+
+
+				document.write("<br/><br/> <b>Sorting</b> <br/> ");
+				var arr4 =["Apple","guava","cherry"]
+				arr4.sort();
+				document.write(arr4);
+
+				// other methods 
+				document.write("<br/><br/> <b>After push pop </b> <br/> ");
+				arr4.push("Mango"); // add item to the end 
+				arr4.push("kiwi");
+				document.write(arr4);
+				arr4.pop(); // remove from end\
+				arr4.shift(); // remove from front
+				document.write(arr4);
+
+				document.write("<br/><br/> <b>Removing elements from Array </b> <br/> ");
+				// removing element from an array
+				// use method spice(pos,n)
+				// pos: location of the elemnt 
+				// n: number from elements to be removed
+				// arr = [0,1,2,3,4,5,6,7,8,9] 
+				// arr.splice(3,6); // it will remove elements from 3 to next 6 elements
+
+				var arr5 = [0,1,2,3,4,5,6,7,8,9];
+				arr5.splice(3,6);
+				document.write("arr5 :- "+arr5);
+
+				//----------------------------------------------------------
+				//        array include method
+				const array1 = [1, 2, 3];
+				console.log(array1.includes(2));// expected output: true
+				const pets = ['cat', 'dog', 'bat'];
+				console.log(pets.includes('cat'));// expected output: true
+				console.log(pets.includes('at'));// expected output: false
+
+				//----------------------------------------------------------
+				//        array join method, join(separator)
+				//The string conversions of all array elements are joined into one string.
+				document.write("<br/><br/> <b>Join </b> <br/> ");
+				
+				var a = ['Wind', 'Water', 'Fire'];
+				a.join();      // 'Wind,Water,Fire'
+				a.join(', ');  // 'Wind, Water, Fire'
+				a.join(' + '); // 'Wind + Water + Fire'
+				a.join('');    // 'WindWaterFire'
+				document.write(a)
+				// task : 
+				// filter() display amount more than 300
+				// find() is 300 in the array or not
+				document.write("<br/><br/> <b>Find</b> <br/> ");
+				
+				const arr6 = [300,400,500,200];
+				var isFind = arr6.find(
+				       (element)=>element == 300
+					   );
+				document.write("isFind "+isFind);
+
+				
+			}
+			doThings();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

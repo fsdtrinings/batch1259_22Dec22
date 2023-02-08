@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <script>
+
+            function doOnLoadThings()
+            {
+                alert("ABC"); // use to display value
+               var name =  prompt("Enter Enter "); // used to take user input
+               if(name == 'sita')
+               {
+                var access =  confirm("allow user to view data "); // if-else
+                document.write("Access "+access);
+               }
+                
+            }
+           // doOnLoadThings();
+
+
+            function joinDemo()
+            {
+                var a = ['Wind', 'Water', 'Fire'];
+			//	a.join();      // 'Wind,Water,Fire'
+			//	a.join(', ');  // 'Wind, Water, Fire'
+				a.join(' + '); // 'Wind + Water + Fire'
+			//	a.join('');    // 'WindWaterFire'
+				document.write(a)
+            }
+            joinDemo();
+            function doStuff()
+            {
+              var a =  document.getElementById("james777").value;
+              console.log("Inside doStuff "+a);
+              console.log("Inside doStuff "+(a+a));
+              var value = parseInt(a);
+              console.log("Inside doStuff "+(value+value));
+              
+
+
+              if(value>500)
+              {
+                console.log("Very large value");
+              }
+              else
+              {
+                console.log("small value")
+              }
+              
+            }
+                 
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="enter data" id="james777" value="500"/>
+        <input type="button" value="click" onclick="joinDemo()"/>
+    </body>
+</html>

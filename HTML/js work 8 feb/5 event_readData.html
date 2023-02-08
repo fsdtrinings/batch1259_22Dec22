@@ -1,0 +1,25 @@
+<HTML>
+	<head>
+		<script>
+		
+			function nameBlur(nameField)
+			{
+				//console.log(nameField);
+				var name = nameField.value;
+				console.log(name);
+			}
+		</script>
+		
+		
+	</head>
+	
+	<body>
+		
+		<h2> Event Handling</h2><br/>
+		<form>
+			Name <input type="text" id="name" onblur="nameBlur(this)"><br/>
+			Age <input type="text" id="name"><br/>
+		</form>
+		
+	</body>
+</HTML>

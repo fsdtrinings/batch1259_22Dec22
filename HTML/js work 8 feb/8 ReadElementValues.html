@@ -1,0 +1,33 @@
+<HTML>
+	<HEAD>
+		<script>
+			function doSomeThing(){
+				console.log("inside doSomeThing...");
+				
+				var input3 = document.getElementById("id101");
+				var input3Value = input3.value;
+				
+				console.log("Input : "+input3);
+				console.log("input 3Value : "+input3Value);
+				
+				/// ===== 2nd by Tags
+				
+				var input1 = document.getElementsByTagName("input")[0];
+				var input2 = document.getElementsByTagName("input")[1];
+				
+				console.log(input1.value);
+				console.log(input2.value);
+				
+			
+			}//end of function
+		</script>
+	</HEAD>
+		
+	<Body>
+		Value 1<input type="text" value="value - 1"/><br/>
+		Value 2<input type="text" value="value - 2"/><br/>
+		Value 3<input type="text" value="value - 3" id="id101"/><br/>
+		<input type="button" value="Button" onclick="doSomeThing()"/>
+		
+	</Body>
+</HTML>

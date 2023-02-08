@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function doThings()
+            {
+                console.log("inside doThings");
+                var num = document.getElementById("in101").value;
+                num = parseInt(num); // pasring is mendoatory otherwise concat
+                num=num+num;
+                console.log(" "+num);
+                document.getElementById("out101").innerHTML = num+"";
+                console.log(" done");
+            }
+        </script>
+    </head>
+    <body>
+        Enter Number <input type="text" id="in101" onblur="doThings()">
+        Output <label id="out101"/>
+    </body>
+</html>

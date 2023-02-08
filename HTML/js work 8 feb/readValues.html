@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script>
+           function doThings()
+           {
+            console.log("inside doThings")
+            var x = document.getElementsByTagName('input')[3];
+            var choice = confirm("Is "+x.value+" you want to choose");
+            console.log(choice);
+           }
+          
+        </script>
+    </head>
+    <body>
+        <input type="text" value="java"/>
+        <input type="radio" value="spring"/> spring
+        <input type="radio" value="data science"/> data science
+        <br/>
+       <input type="button" onclick="doThings()" value="click"/>
+    </body>
+</html>
