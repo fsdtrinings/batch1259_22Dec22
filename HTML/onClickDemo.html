@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <script>
+            function doStuff()
+            {
+              var a =  document.getElementById("james777").value;
+              console.log("Inside doStuff "+a);
+              console.log("Inside doStuff "+(a+a));
+              var value = parseInt(a);
+              console.log("Inside doStuff "+(value+value));
+              
+              if(value>500)
+              {
+                console.log("Very large value");
+              }
+              else
+              {
+                console.log("small value")
+              }
+              
+            }
+                 
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="enter data" id="james777" value="500"/>
+        <input type="button" value="click" onclick="doStuff()"/>
+    </body>
+</html>
