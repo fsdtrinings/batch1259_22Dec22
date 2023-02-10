@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var Account_1 = require("./Account");
+var a1 = new Account_1.Account("Ramesh", 2000);
+var a2 = new Account_1.Account("Suresh", 3000);
+var a3 = new Account_1.Account("Mukesh", 1500);
+console.log(a1);
+a1.updateInterest();
+console.log(a1);
+var accountBalance = a1.getBalance();
+console.log("Balance :- " + accountBalance);
